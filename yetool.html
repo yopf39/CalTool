@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ye's CalTool</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+
+        body {
+            background-color: lightblue;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra todos los elementos */
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            color:darkcyan;
+            font-family: Helvetica, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            grid-template-rows: auto;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background-color:darkcyan;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 900px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-column: 1;
+            gap: 10px;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 15px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            align-items: center;
+            text-align: center;
+            grid-column: 2;
+            grid-row: 1;
+            align-self: flex-start;
+            gap: 10px;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 15px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color:darkcyan;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.3;
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(0, 112, 112);
+        }
+        
+        .general-box {
+            color:darkcyan;
+            font-family: Helvetica, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            background-color:darkcyan;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 900px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .general-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 30px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group  {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            justify-content: space-evenly;
+        }
+
+        form {
+            display: flex;
+            width: 100%; /* Limita el ancho del formulario */
+            margin-bottom: 15px; /* Espacio entre las filas */
+            gap: 5px;
+        }
+
+        .form-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 200px
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        button {
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            width: 70%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+
+        .button-container {
+            grid-column: 1;
+        }
+
+        button:hover {
+            background-color: #70abdb;
+        }
+
+
+        .resaltar {
+            font-size: 2em;
+            color: #4682B4;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .general-container {
+                padding: 20px; /* Menos padding en móviles para optimizar espacio */
+            }
+
+            .form-input {
+                max-width: 100%; /* Los inputs ocupan todo el ancho disponible */
+            }
+
+            button {
+                width: 90%; /* El botón ocupa más espacio en móviles */
+            }
+        }
+        
+    </style>
+
+    <script src="script.js"></script>
+
+    <body>
+        <h1>Ye's CalTool</h1>
+        <div class="container">
+            <div>
+                <div id=principal>
+                    <div class="inner-container">
+                        <h2>Portafolio de evidencias</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="portafolio" name="portafolio" min="0" max="100" step="0.1" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input" type="number" id="portafolioc" name="portafolioc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div style="display:block" class="inner-container" id="actividades">
+                        <h2>Actividades/Tareas/Practicas/etc.</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="actp" name="actp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input"type="number" id="actc" name="actc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="inner-container">
+                        <h2>Examen</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="exp" name="exp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input" type="number" id="exc" name="exc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button id="botonCalcular" type="button" onclick="calcularparcial()">Calcular</button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <h2 id="titulo">¡Bienvenido a CalTool!</h2>
+                <div id="instrucciones" style="display:block">
+                <p><b>CalTool</b> es una herramienta que te permite calcular tus calificaciones sin la necesidad de sacar la calculadora.</p>
+                <p>Ingresa <b>el valor de los criterios de evaluación</b> y <b>tu calificación</b> en ellos para obtener tus resultados del parcial.</p>
+                <p>Si estás en apuros, <b>puedes dejar una calificación libre</b> para saber cuanto necesitarás para poder panzar</p>
+                </div>
+
+                <div id="instrucciones1" style="display:block">
+                <h2>¿Falta un criterio de evaluación?</h2>
+                Algunas materias evalúan con 4 aspectos distintos, para agregar un cuarto haz clic en el botón.
+                <button id="agregarCriterio">Agregar</button>
+                </div>
+
+                <div id="instrucciones2" style="display:block">
+                <h2>¿Sobra un criterio de evaluación?</h2>
+                Algunas materias evalúan con solo 2 aspectos, para usar dos haz clic en el botón.
+                <button id="eliminarCriterio">Eliminar</button>
+                </div>
+
+                <div>
+                <p id = "mensaje" style="display:none;">Tu calificación de este parcial es de:</p>
+                <p><span class="resaltar" id="caltotal" style="display:none;">(calificacion)</span></p>
+                </div>
+
+                <div>
+                <p id="mensaje2" style="display:none;"> Para pasar, necesitarias:</p>
+                <p id="nec" class="resaltar" style="display:none;">(calificacion)</p>
+                <p id="crit" style="display:none;">en (aspecto de evaluacion restante)</p>
+                </div>
+
+                <button style="display:none;" id="botonReset">Reiniciar</button>
+
+            </div>
+        </div>
+
+        <div class="general-box">
+            <div class="general-container">
+                <h2>CalTool</h2>
+                <p>CalTool es una herramienta creada para calcular de manera rápida y cómoda calificaciones de la UAEH</p>
+                <p>Hola, soy Ye. Creé CalTool por la necesidad de tener que calcular calificaciones cada mes o tener que despejar la calificación que necesitas en un examen para no reprobar, son procesos tediosos y a veces lentos que me estaban empezando a desesperar, así que a falta de una forma rápida y facíl de hacerlo decidí crearla yo mismo, de nada.</p>
+                <p>Cualquier sugerencia, comentario o reportes de bugs a mi Instagram: <a href=https://www.instagram.com/yopf39/>@yopf39</a></p>
+            </div>
+        </div>
+
+        <div class="general-box">
+            <div class="general-container">
+                <h2>Changelog - v1.0.0</h2>
+                <p>Esta es la primera version de CalTool, esperen que sea una basura y que tenga errores, me puse en un auto-crunch para poder sacar la herramienta antes de que empiecen todos los examenes parciales de ahorita, así todos pueden usarla en el momento que mas conviene, además, acabo de aprender JavaScript.</p>
+                <ul>
+                    <li>Implementación de la calculadora de calificaciones con soporte para 2 a 4 criterios de evaluación.</li>
+                    <li>Funcionalidad para agregar y eliminar criterios dinámicamente.</li>
+                    <li>Validación de porcentajes que deben sumar un 90%.</li>
+                    <li>Cálculo automático de la calificación final y la calificación necesaria para aprobar.</li>
+                    <li>Interfaz de usuario limpia y fácil de usar con soporte para dispositivos móviles.</li>
+                    <li>Botón de "reset" para reiniciar los cálculos.</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+    <footer>
+        <p>&copy; 2025 CalTool - Yerik Lozano. Todos los derechos reservados.</p>
+      </footer>
+      
+</html>
