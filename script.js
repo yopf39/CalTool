@@ -1,6 +1,6 @@
 // Copyright (c) 2025  Yerik Lozano
-// Todos los derechos reservados.
-// Honestamente el código es una basura, no se quien se lo quiera robar
+// Este código está bajo la Licencia MIT.
+// Consulta el archivo LICENSE para más detalles.
 
 
 document.addEventListener("DOMContentLoaded", () => {
