@@ -1,0 +1,185 @@
+        body {
+            background-color: lightblue;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            color:darkcyan;
+            font-family: Helvetica, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            grid-template-rows: auto;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background-color:darkcyan;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 900px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        .inner-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-column: 1;
+            gap: 10px;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 15px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            align-items: center;
+            text-align: center;
+            grid-column: 2;
+            grid-row: 1;
+            align-self: flex-start;
+            gap: 10px;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 15px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color:darkcyan;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.3;
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(0, 112, 112);
+        }
+        
+        .general-box {
+            color:darkcyan;
+            font-family: Helvetica, sans-serif;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            background-color:darkcyan;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 900px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .general-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            background-color:aliceblue; /* Color de fondo claro para el cuadro */
+            padding: 30px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group  {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            justify-content: space-evenly;
+        }
+
+        form {
+            display: flex;
+            width: 100%; /* Limita el ancho del formulario */
+            margin-bottom: 15px; /* Espacio entre las filas */
+            gap: 5px;
+        }
+
+        .form-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 200px
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        button {
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            width: 70%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+
+        .button-container {
+            grid-column: 1;
+        }
+
+        button:hover {
+            background-color: #70abdb;
+        }
+
+
+        .resaltar {
+            font-size: 2em;
+            color: #4682B4;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .general-container {
+                padding: 20px; /* Menos padding en móviles para optimizar espacio */
+            }
+
+            .form-input {
+                max-width: 100%; /* Los inputs ocupan todo el ancho disponible */
+            }
+
+            button {
+                width: 90%; /* El botón ocupa más espacio en móviles */
+            }
+        }
