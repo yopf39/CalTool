@@ -45,10 +45,7 @@ function calcularparcial() {
 
     ];
 
-    if (document.getElementById("actividades").style.display !== "none") {
-        pcntg.push(parseFloat(document.getElementById("actp").value) / 100);
-        calif.push(parseFloat(document.getElementById("actc").value));
-    } else {
+    if (document.getElementById("actividades").style.display === "none") {
         pcntg = pcntg.map(valor => isNaN(valor) ? 0 : valor);
         if (isNaN(parseFloat(calif[1])) || calif[1] === "") {
             calif[1] = 0; 
