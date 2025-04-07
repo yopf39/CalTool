@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+        
+        header {
+            font-family: 'Montserrat', sans-serif;
+            background-color: aliceblue;
+            border: 3px solid darkcyan;
+            border-radius: 15px;
+            text-decoration: none;
+            padding: 5px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            width: 95%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            font-size: 1.2rem;
+        }
+        
+        body {
+            background-color: #A7D8D8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn-back {
+            position: absolute;
+            left: 5px;
+            display: inline-block;
+            padding: 10px 10px;
+            background-color: #efeeee;
+            color: darkcyan;
+            font-size: 13px;
+            text-align: center;
+            border-radius: 15px;
+            border: 3px solid #67AEB1;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background-color: #91C8C6;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        h1, h2, h3 {
+            color:darkcyan;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        p {
+            color: #2C2D3A;
+            font-weight: 400;
+        }
+
+        li {
+            color : #2C2D3A;
+            line-height: 1.5;
+
+        }
+
+        .list-title {
+            color: darkcyan
+        }
+
+        a {
+            color: darkcyan;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.4;
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(0, 112, 112);
+        }
+        
+        .general-box {
+            color: darkcyan;
+            display:flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            background-color:#008b8b;
+            padding: 10px;
+            margin: 8px;
+            max-width: 95%;
+            border: 1px solid #67AEB1;
+            border-radius: 20px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .general-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            background-color: #F6F3F4; /* Color de fondo claro para el cuadro */
+            padding: 30px;
+            box-sizing: border-box;
+            width: 97%;
+            border: 1px solid #67AEB1;
+            border-radius: 15px;
+            box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .general-container {
+                padding: 20px; /* Menos padding en móviles para optimizar espacio */
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .general-box {
+                max-width: 900px;
+            }
+
+            header {
+                width: 900px;
+            }
+        }

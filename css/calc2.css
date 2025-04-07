@@ -1,0 +1,130 @@
+.container {
+    color:darkcyan;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 10px;
+    background-color:darkcyan;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 95%;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color:aliceblue; /* Color de fondo claro para el cuadro */
+    padding: 15px;
+    box-sizing: border-box;
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.invis-container {
+    flex: 1 1 0;
+}
+
+.results-container {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color:aliceblue; /* Color de fondo claro para el cuadro */
+    padding: 15px;
+    box-sizing: border-box;
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.input-group  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Limita el ancho del formulario */
+    margin-bottom: 15px; /* Espacio entre las filas */
+    gap: 5px;
+}
+
+.form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #91C8C6;
+    width: 100%;
+    max-width: 200px
+}
+
+.form-input::placeholder {
+    color: #888;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    width: 70%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2C2D3A;
+    border: 3px solid #91C8C6;
+    border-radius: 5px;
+}
+
+
+.button-container {
+    grid-column: 1;
+}
+
+button:hover {
+    background-color: #91C8C6;
+}
+
+
+.resaltar {
+    font-size: 2em;
+    color: #4682B4;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-input {
+        max-width: 100%; /* Los inputs ocupan todo el ancho disponible */
+    }
+
+    button {
+        width: 90%; /* El botón ocupa más espacio en móviles */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 900px;
+    }
+}
