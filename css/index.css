@@ -57,6 +57,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .calculator-list{
+    .calculator-list {
         grid-template-columns: 1fr;
     }
+}
