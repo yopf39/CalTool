@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CalTool - Calculadora de Calificación Final</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/calc2.css">
+    </head>
+
+    <script src="js/final.js"></script>
+
+    <header>
+        <a href="index.html" class="btn-back">Inicio</a>
+        <h1 class="header-title">CalTool - Calculadora de Calificacion Final</h1>
+    </header>
+
+    <body>
+        <div class="container">
+            <div class="results-container">
+                <h2 id="titulo">Calculadora de Calificación Final</h2>
+                <div id="instrucciones" style="display:block">
+                <p>Ingresa <b>tu calificación</b> en cada parcial para obtener tu calificación final.</p>
+                <p>Si necesitas salvar el semestre, <b>puedes dejar el tercer parcial vacío</b> para saber cuanto necesitarás para poder panzar.</p>
+                </div>
+
+                <div>
+                <p id = "mensaje" style="display:none;">Tu calificación final es de:</p>
+                <p><span class="resaltar" id="caltotal" style="display:none;">(calificacion)</span></p>
+                </div>
+
+                <div>
+                <p id="mensaje2" style="display:none;"> Para pasar, necesitarias:</p>
+                <p id="nec" class="resaltar" style="display:none;">(calificacion)</p>
+                <p id="crit" style="display:none;">en (aspecto de evaluacion restante)</p>
+                </div>
+
+                <button style="display:none;" id="botonReset">Reiniciar</button>
+            </div>
+
+            <div class="invis-container">
+                <div id=principal>
+                    <div class="inner-container">
+                        <h2>Primer Parcial</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularfinal();">
+                                <input class="form-input" type="number" id="primerp" min="0" max="10" step="0.1" placeholder="Calificación">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="inner-container">
+                        <h2>Segundo Parcial</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularfinal();">
+                                <input class="form-input" type="number" id="segundop" min="0" max="10" step="0.1" placeholder="Calificación">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="inner-container">
+                        <h2>Tercer Parcial</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularfinal();">
+                                <input class="form-input" type="number" id="tercerp" min="0" max="10" step="0.1" placeholder="Calificación">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button id="botonCalcular" type="button" onclick="calcularfinal()">Calcular</button>
+                </div>
+            </div>
+        </div>
+
+    

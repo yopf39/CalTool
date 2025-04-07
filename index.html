@@ -1,125 +1,123 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ye's CalTool</title> 
+        <title>CalTool</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
 
-
-    <script src="script.js"></script>
+    <header>
+        <h1 class="header-title">CalTool - Inicio</h1>
+    </header>
 
     <body>
-        <h1>Ye's CalTool</h1>
-        <div class="container">
-            <div>
-                <div id=principal>
-                    <div class="inner-container">
-                        <h2>Portafolio de evidencias</h2>
-                        <div class="input-group">
-                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
-                                <input class="form-input" type="number" id="portafolio" name="portafolio" min="0" max="100" step="0.1" placeholder="Valor en porcentaje (%)" required>
-                                <input class="form-input" type="number" id="portafolioc" name="portafolioc" min="0" max="10" step="0.1" placeholder="Calificación">
-
-                            </form>
+        <div class="general-box">
+            <div class="general-container">
+                <h1>¡Bienvenido a CalTool!</h1>
+                <h2>Selecciona la calculadora que usarás hoy</h2>
+                <ol class="calculator-list">
+                    <li class="calculator-item">
+                        <div>
+                        <a href="calparcial.html" class="calculator-name">Calculadora de Parcial</a>
+                        <p>Calcula la calificación de una materia este parcial y la calificación necesaria en examen para aprobar.</p>
                         </div>
-                    </div>
 
-                    <div style="display:block" class="inner-container" id="actividades">
-                        <h2>Actividades/Tareas/Practicas/etc.</h2>
-                        <div class="input-group">
-                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
-                                <input class="form-input" type="number" id="actp" name="actp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
-                                <input class="form-input"type="number" id="actc" name="actc" min="0" max="10" step="0.1" placeholder="Calificación">
-
-                            </form>
+                        <div class="calculator-image">
+                            <img src="img/parcial.png">
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="inner-container">
-                        <h2>Examen</h2>
-                        <div class="input-group">
-                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
-                                <input class="form-input" type="number" id="exp" name="exp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
-                                <input class="form-input" type="number" id="exc" name="exc" min="0" max="10" step="0.1" placeholder="Calificación">
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="button-container">
-                    <button id="botonCalcular" type="button" onclick="calcularparcial()">Calcular</button>
-                </div>
-            </div>
-
-            <div class="results-container">
-                <h2 id="titulo">¡Bienvenido a CalTool!</h2>
-                <div id="instrucciones" style="display:block">
-                <p><b>CalTool</b> es una herramienta que te permite calcular tus calificaciones sin la necesidad de sacar la calculadora.</p>
-                <p>Ingresa <b>el valor de los criterios de evaluación</b> y <b>tu calificación</b> en ellos para obtener tus resultados del parcial.</p>
-                <p>Si estás en apuros, <b>puedes dejar una calificación libre</b> para saber cuanto necesitarás para poder panzar</p>
-                </div>
-
-                <div id="instrucciones1" style="display:block">
-                <h2>¿Falta un criterio de evaluación?</h2>
-                Algunas materias evalúan con 4 aspectos distintos, para agregar un cuarto haz clic en el botón.
-                <button id="agregarCriterio">Agregar</button>
-                </div>
-
-                <div id="instrucciones2" style="display:block">
-                <h2>¿Sobra un criterio de evaluación?</h2>
-                Algunas materias evalúan con solo 2 aspectos, para usar dos haz clic en el botón.
-                <button id="eliminarCriterio">Eliminar</button>
-                </div>
-
-                <div>
-                <p id = "mensaje" style="display:none;">Tu calificación de este parcial es de:</p>
-                <p><span class="resaltar" id="caltotal" style="display:none;">(calificacion)</span></p>
-                </div>
-
-                <div>
-                <p id="mensaje2" style="display:none;"> Para pasar, necesitarias:</p>
-                <p id="nec" class="resaltar" style="display:none;">(calificacion)</p>
-                <p id="crit" style="display:none;">en (aspecto de evaluacion restante)</p>
-                </div>
-
-                <button style="display:none;" id="botonReset">Reiniciar</button>
-
+                    <li class="calculator-item">
+                        <div>
+                            <a href="calfinal.html" class="calculator-name">Calculadora de Calificación Final</a>
+                            <p>Calcula la calificacón final de una materia en el semestre y cuánto necesitas para salvarlo.</p>
+                            </div>
+    
+                            <div class="calculator-image">
+                                <img src="img/final.png">
+                            </div>
+                    </li>
+                </ol>
             </div>
         </div>
 
         <div class="general-box">
             <div class="general-container">
-                <h2>CalTool</h2>
-                <p>CalTool es una herramienta creada para calcular de manera rápida y cómoda calificaciones de la UAEH</p>
-                <p>Hola, soy Ye. Creé CalTool por la necesidad de tener que calcular calificaciones cada mes o tener que despejar la calificación que necesitas en un examen para no reprobar, son procesos tediosos y a veces lentos que me estaban empezando a desesperar, así que a falta de una forma rápida y facíl de hacerlo decidí crearla yo mismo, de nada.</p>
-                <p>Cualquier sugerencia, comentario o reportes de bugs a mi Instagram: <a href=https://www.instagram.com/yopf39/>@yopf39</a></p>
+                <div class="about">
+                    <h1>¿Qué es CalTool?</h1>
+                    <p>CalTool es una herramienta diseñada para calcular de forma rápida y sencilla las calificaciones de la UAEH. Permite calcular tanto la calificación parcial como la final de cualquier materia, brindándote los resultados necesarios para aprobar. Finalmente se quedaron atrás los días de hacer los tediosos procesos en la calculadora.</p>
+                    <p>Puedes encontrar el código fuente en el <a href="https://github.com/yopf39/CalTool">Github.</a></p>
+                </div>
+
+                <div class="aboutmeimg">
+                    <div class="me">
+                        <img src="img/me.jpg">
+                    </div>
+
+                    <div class="aboutme">
+                        <h1>¿Quién creo tal bendición?</h1>
+                        <p>Hola, soy Ye/Yerik/Yoyo, lo que sea. Programador novato, músico, atleta, diseñador gráfico, YouTuber y estudiante del 2do-3 de Prepa 4.</p>
+                        <p>Creé CalTool por la necesidad de tener que calcular calificaciones cada mes o tener que despejar la calificación que necesitas en un examen para no reprobar. Estos son procesos tediosos y a veces lentos que me estaban empezando a desesperar, así que a falta de una forma rápida y facíl de hacerlo decidí crearla yo mismo, de nada.</p>
+                        <p>Cualquier sugerencia, comentario o reporte de bugs a mi Instagram: <a href=https://www.instagram.com/yopf39/>@yopf39</a></p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="general-box">
             <div class="general-container">
-                <h2>Release Notes - v1.0.0</h2> <p>28 de Marzo del 2024</p>
+                <h1>Changelog</h1>
+                <h2>Actualización - 2.0.0</h2> <h3>7 de Abril del 2025</h3>
+                <p>PRIMERA ACTUALIZACIÓN MAYOR (probablemente la única que haya). Vamos por partes, primero notarán que ahora hay una nueva y fancy página principal, la verdad estoy orgulloso del resultado.</p>
+                <p>Segundo, se acerca el fin del semestre, por lo que muchas personas necesitan salvar sus materias, para eso les traje la nueva <b>calculadora de calificación final</b>, ahora tendrán una preocupación más (o menos) al saber cuánto necesitan para no ir a hacer un extraordinario.</p>
+                <ul>
+                    <li class="list-title"><h2>Nuevas características</h2>
+                        <ul>
+                            <li class="list-title"><h3>Mejoras en el diseño</h3>
+                                <ul>
+                                    <li>Nueva página principal con selección de calculadora, información del proyecto, de mí y changelog.</li>
+                                    <li>Nuevo header, permite regresar a la página principal.</li>
+                                    <li>Paleta de colores arreglada y nuevas fuentes.</li>
+                                </ul>
+                            </li>
+                            <li><h3>Nueva calculadora de calificación final</h3>
+                                <ul>
+                                    <li>Calcula tu calificación final del semestre y lo necesario para salvarlo.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="list-title"><h2>Cambiado</h2>
+                        <ul>
+                            <li>Se mejoró la organización interna de la página.</li>
+                        </ul>
+                    </li>
+
+                    <li class="list-title"><h2>Corregido</h2>
+                        <ul>
+                            <li>Se corrigió un pequeño error en el que en las pantallas pequeñas se podía hacer un incómodo scroll lateral.</li>
+                            <li>Se corrigió la fecha del último changelog de Marzo del 2024 a Marzo del 2025. <del>Sí, así de estúpido soy.</del></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>Lanzamiento - 1.0.0</h2> <h3>28 de Marzo del 2025</h3>
                 <p>Esta es la primera version de CalTool, esperen que sea una basura y que tenga errores, me puse en un auto-crunch para poder sacar la herramienta antes de que empiecen todos los examenes parciales de ahorita, así todos pueden usarla en el momento que mas conviene, además, acabo de aprender JavaScript.</p>
                 <ul>
-                <h2><li>Caracteristicas</li></h2>
-                    <ul>
-                        <li>Calculadora de calificaciones con soporte para 2 a 4 criterios de evaluación.</li>
-                        <li>Funcionalidad para agregar y eliminar criterios dinámicamente.</li>
-                        <li>Validación de porcentajes que deben sumar un 90%.</li>
-                        <li>Cálculo automático de la calificación final y la calificación necesaria para aprobar.</li>
-                        <li>Interfaz de usuario limpia y fácil de usar con soporte para dispositivos móviles.</li>
-                        <li>Botón de "reset" para reiniciar los cálculos.</li>
-                    </ul>
+                    <h2><li class="list-title">Caracteristicas</li></h2>
+                        <ul>
+                            <li>Calculadora de calificaciones con soporte para 2 a 4 criterios de evaluación.</li>
+                            <li>Funcionalidad para agregar y eliminar criterios dinámicamente.</li>
+                            <li>Validación de porcentajes que deben sumar un 90%.</li>
+                            <li>Cálculo automático de la calificación final y la calificación necesaria para aprobar.</li>
+                            <li>Interfaz de usuario limpia y fácil de usar con soporte para dispositivos móviles.</li>
+                            <li>Botón de "reset" para reiniciar los cálculos.</li>
+                        </ul>
                 </ul>
             </div>
         </div>
 
     </body>
-    <footer>
-      <p>&copy; 2025 CalTool, creado por Yerik Lozano.  
-      Distribuido bajo la <a href="https://opensource.org/licenses/MIT" target="_blank">Licencia MIT</a>.</p>
-    </footer>
-      
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CalTool - Calculadora de Parciales</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/calc1.css">
+    </head>
+
+    <script src="js/parcial.js"></script>
+
+    <header>
+        <a href="index.html" class="btn-back">Inicio</a>
+        <h1 class="header-title">CalTool - Calculadora de Parciales</h1>
+    </header>
+    <body>
+        <div class="container">
+            <div>
+                <div id=principal>
+                    <div class="inner-container">
+                        <h2>Portafolio de evidencias</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="portafolio" name="portafolio" min="0" max="100" step="0.1" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input" type="number" id="portafolioc" name="portafolioc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div style="display:block" class="inner-container" id="actividades">
+                        <h2>Actividades/Tareas/Practicas/etc.</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="actp" name="actp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input"type="number" id="actc" name="actc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="inner-container">
+                        <h2>Examen</h2>
+                        <div class="input-group">
+                            <form action=# method=POST onsubmit="event.preventDefault(); calcularparcial();">
+                                <input class="form-input" type="number" id="exp" name="exp" min="0" max="100" placeholder="Valor en porcentaje (%)" required>
+                                <input class="form-input" type="number" id="exc" name="exc" min="0" max="10" step="0.1" placeholder="Calificación">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button id="botonCalcular" type="button" onclick="calcularparcial()">Calcular</button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <h2 id="titulo">Calculadora de Parciales</h2>
+                <div id="instrucciones" style="display:block">
+                <p>Ingresa <b>el valor de los criterios de evaluación</b> y <b>tu calificación</b> en ellos para obtener tus resultados del parcial.</p>
+                <p>Si estás en apuros, <b>puedes dejar una calificación libre</b> para saber cuanto necesitarás para poder panzar</p>
+                </div>
+
+                <div id="instrucciones1" style="display:block">
+                <h2>¿Falta un criterio de evaluación?</h2>
+                <p>Algunas materias evalúan con 4 aspectos distintos, para agregar un cuarto haz clic en el botón.</p>
+                <button id="agregarCriterio">Agregar</button>
+                </div>
+
+                <div id="instrucciones2" style="display:block">
+                <h2>¿Sobra un criterio de evaluación?</h2>
+                <p>Algunas materias evalúan con solo 2 aspectos, para usar dos haz clic en el botón.</p>
+                <button id="eliminarCriterio">Eliminar</button>
+                </div>
+
+                <div>
+                <p id = "mensaje" style="display:none;">Tu calificación de este parcial es de:</p>
+                <p><span class="resaltar" id="caltotal" style="display:none;">(calificacion)</span></p>
+                </div>
+
+                <div>
+                <p id="mensaje2" style="display:none;"> Para pasar, necesitarias:</p>
+                <p id="nec" class="resaltar" style="display:none;">(calificacion)</p>
+                <p id="crit" style="display:none;">en (aspecto de evaluacion restante)</p>
+                </div>
+
+                <button style="display:none;" id="botonReset">Reiniciar</button>
+
+            </div>
+        </div>
+    </body>
+</html>
