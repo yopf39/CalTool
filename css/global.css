@@ -43,7 +43,8 @@
         
         header {
             font-family: 'Montserrat', sans-serif;
-            background-color: aliceblue;
+            text-align: center;
+            background-color: #F6F3F4;
             border: 3px solid darkcyan;
             border-radius: 15px;
             text-decoration: none;
@@ -74,6 +75,7 @@
         }
 
         .btn-back {
+            font-weight: bold;
             position: absolute;
             left: 5px;
             display: inline-block;
@@ -93,6 +95,7 @@
 
         div {
             margin-bottom: 10px;
+            max-width: 100%;
         }
 
         h1, h2, h3 {
@@ -164,6 +167,16 @@
         @media screen and (max-width: 768px) {
             .general-container {
                 padding: 20px; /* Menos padding en móviles para optimizar espacio */
+            }
+
+            header {
+                flex-direction:column;
+                gap: 5px;
+            }
+
+            .btn-back {
+                width: 90%;
+                position: static;
             }
         }
 

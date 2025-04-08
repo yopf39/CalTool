@@ -60,4 +60,12 @@
     .calculator-list {
         grid-template-columns: 1fr;
     }
+
+    .aboutmeimg {
+        flex-direction: column-reverse;
+    }
+
+    .aboutme {
+        text-align: left;
+    }
 }
