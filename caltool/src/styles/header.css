@@ -1,0 +1,100 @@
+header {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-secondary);
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    width:calc(100%-20px);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.headerButton {
+    font-weight:normal;
+    position: absolute;
+    left: 0px;
+    display: inline-block;
+    padding: 22.2px 20px;
+    border-radius: 12px 0px 0px 12px;
+    background-color: #efeeee;
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.headerButton:hover {
+    background-color: var(--color-bg-soft);
+}
+
+.dropdown-btn-header {
+    font-weight:normal;
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 70px;
+    padding: 22.2px 20px;
+    background-color: #efeeee;
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.dropdown-btn-header:hover {
+    background-color: var(--color-bg-soft);
+    cursor: default;
+}
+
+.dropdown-btn-header:hover .dropdown-content {display:block;}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display:block;
+    font-weight:normal;
+    padding: 10px 15px;
+    background-color: #efeeee;
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-bg-soft);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        align-items:  flex-end;
+    }
+}

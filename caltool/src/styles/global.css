@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+  --color-primary: #bea9ff;        
+  --color-primary-dark: #8760c7;   
+
+  --color-secondary: #ff6b81;      
+  --color-secondary-dark: #e11d48; 
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #efe9ff;        
+  --color-text: #2e2a33;           
+  --color-text-muted: #6b6474;     
+
+  --color-success: #38b000;        
+  --color-error: #d00000;          
+}
+        
+body {
+  background-color: var(--color-bg-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  color: var(--color-primary-dark);
+  font-family: 'Noto Sans JP', 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  color: var(--color-text);
+  font-weight: 400;
+  text-align: left;
+}
+
+.p-content {
+  text-align: left;
+}
+
+li {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primary);;
+}
+
+.c-heading {
+  text-align: center;
+}
+
+.c-heading h1, h2 {
+  display: inline-block;
+}
+
+.general-box {
+  color: var(--color-bg); /* white text on accent */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 75vw; 
+  background-color: var(--color-secondary); /* strong accent background */
+  padding: 10px;
+  margin: 18px;
+  border-radius: 26px;
+  box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;;
+}
+
+.general-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg); /* white */
+  padding: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .general-box {
+    width: 95vw;
+    margin: 10px;
+  }
+
+  .general-container {
+      padding: 20px; /* Menos padding en móviles para optimizar espacio */
+  }
+
+  header {
+      flex-direction:column;
+      gap: 5px;
+  }
+
+  .btn-back {
+      width: 90%;
+      position: static;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

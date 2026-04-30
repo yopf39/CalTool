@@ -1,0 +1,45 @@
+.cp-box {
+    color: var(--color-secondary);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75vw;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    margin: 18px;
+    gap: 8px;
+    border-radius: 26px;
+    box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.1);
+    align-self: stretch;
+    box-sizing: border-box;
+}
+
+.adddel-button {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2C2D3A;
+    border: 3px solid var(--color-primary-dark);
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--color-bg-soft);
+    box-shadow: 0px 6px 0px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .cp-box {
+        width: 95vw;
+        margin: 10px;
+        flex-direction: column-reverse;
+    }
+}
