@@ -28,8 +28,7 @@ function About() {
             <img className="me" src="img/me.jpg" />
             <p className="p-content">
               Hola, soy Ye/Yerik/Yoyo, lo que sea. Programador novato, músico,
-              atleta, diseñador gráfico, YouTuber, animador y estudiante de
-              Prepa 4.
+              atleta, diseñador gráfico, YouTuber, animador y estudiante.
             </p>
             <p className="p-content">
               Creé CalTool por la necesidad de tener que calcular calificaciones
