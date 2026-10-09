@@ -40,7 +40,7 @@ function About() {
             </p>
             <p className="p-content">
               Cualquier sugerencia, comentario o reporte de bugs a mi Instagram:{" "}
-              <Link to="https://www.instagram.com/yerik.lozano/">@yerik.lozano</Link>
+              <Link to="https://www.instagram.com/clov3rgarden_/">clov3rgarden_</Link>
             </p>
           </div>
         </div>
