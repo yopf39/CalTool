@@ -7,8 +7,8 @@ function Header () {
             <Link to="/" className="headerButton">Inicio</Link>
                 <div className="dropdown-btn-header">Calculadoras
                     <div className="dropdown-content">
-                        <a href="/calculadora-parcial">Calculadora de Parciales</a>
-                        <a href="/calculadora-final">Calculadora de Calificación Final</a>
+                        <Link to="/calculadora-parcial">Calculadora de Parciales</Link>
+                        <Link to="/calculadora-final">Calculadora de Calificación Final</Link>
                     </div>
                 </div>
             <h1 className="header-title">CalTool</h1>
