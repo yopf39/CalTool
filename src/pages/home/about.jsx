@@ -27,11 +27,7 @@ function About() {
           <div>
             <img className="me" src="img/me.jpg" />
             <p className="p-content">
-              Hola, soy Ye/Yerik/Yoyo, lo que sea. Programador novato, músico,
-              atleta, diseñador gráfico, YouTuber, animador y estudiante.
-            </p>
-            <p className="p-content">
-              Creé CalTool por la necesidad de tener que calcular calificaciones
+              Hola, soy Clover. Creé CalTool por la necesidad de tener que calcular calificaciones
               cada mes o tener que despejar la calificación que necesitas en un
               examen para no reprobar. Estos son procesos tediosos y a veces
               lentos que me estaban empezando a desesperar, así que a falta de
@@ -40,7 +36,7 @@ function About() {
             </p>
             <p className="p-content">
               Cualquier sugerencia, comentario o reporte de bugs a mi Instagram:{" "}
-              <Link to="https://www.instagram.com/clov3rgarden_/">clov3rgarden_</Link>
+              <Link to="https://www.instagram.com/clov3rgarden_/">@clov3rgarden_</Link>
             </p>
           </div>
         </div>
