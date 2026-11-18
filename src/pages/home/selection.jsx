@@ -18,7 +18,7 @@ function CalcSelection() {
                             </div>
 
                             <div className="calculator-image">
-                                <img src='/img/parcial.png' />
+                                <img src='img/parcial.png' />
                             </div>
                         </li>
                     </a>
@@ -32,7 +32,7 @@ function CalcSelection() {
                                 </div>
         
                                 <div className="calculator-image">
-                                    <img src='/img/final.png' />
+                                    <img src='img/final.png' />
                             </div>
                         </li>
                     </a>
